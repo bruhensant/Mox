@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    
+    height: 99vh;
+    width: 99vw;
+    margin: 0;
+}
+
+.div_cartões {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+}
+
+@mixin card_player($fundo,$fonte) {
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: $fundo;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    a {
+        color: $fonte;
+        font-size: 50px;
+        font-family: 'Bebas Neue';
+    }
+}
+
+.card_player {
+    @include card_player(black, white);
+}
+
+
+
+
+.card_playr {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    background-color: red;
+    .LP {
+        font-size: 50px;
+        font-family: 'Bebas Neue', Arial;
+        color: white;
+    }
+}
