@@ -1,56 +1,79 @@
 
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-body {
-    
-    height: 99vh;
-    width: 99vw;
+html, body {
+    height: 100%;
+    overflow: hidden;
     margin: 0;
 }
 
+body {
+    background-color: black;
+    margin-bottom: 50px;
+}
+
 .div_cartões {
-    align-items: stretch;
     display: flex;
+    align-items: stretch;
     flex-wrap: wrap;
     flex-grow: 1;
+    gap: 0.5rem;
 
+    padding: 0.5rem;
+    height: 98%; //TODO arrumar um jeito de isso ser mais "certo".
 }
 
-@mixin card_player($fundo,$fonte) {
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    width: 200px;
-    background-color: $fundo;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
+@mixin card_player($cor_fundo,$cor_fonte) {
     display: flex;
     justify-content: center;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
 
-    a {
-        color: $fonte;
-        font-size: 50px;
+    padding: 1.5rem;
+    width: 100%;
+    
+    background-color: $cor_fundo;
+    border-radius: 1rem;
+
+    span {
+        @include numerico();
         font-family: 'Bebas Neue';
+        color: $cor_fonte;
+        font-size: 5rem;
     }
 }
 
-.card_player {
-    @include card_player(black, white);
+@mixin numerico() {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin flip_vh() {
+    -webkit-transform: scale(-1, 1);
+       -moz-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+         -o-transform: scale(-1, 1);
+            transform: scale(-1, -1);
+}
+
+.player_1 {
+    @include card_player(red, white);
+}
+
+.player_2 {
+    @include card_player(green, white);
+    @include flip_vh();
 }
 
 
-
-
-.card_playr {
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    background-color: red;
-    .LP {
-        font-size: 50px;
-        font-family: 'Bebas Neue', Arial;
-        color: white;
-    }
-}
