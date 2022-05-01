@@ -13,8 +13,6 @@ $diamond: #999999;
 $pearl: #FEFEFE;
 
 
-
-
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
@@ -49,7 +47,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    padding: 1.5rem;
+    //padding: 1.5rem;
     width: 100%;
     
     background-color: $cor_fundo;
@@ -58,9 +56,23 @@ body {
     span {
         @include numerico();
         font-family: 'Inter var';
-        font-weight: 200;
+        font-weight: 400;
         color: $cor_fonte;
-        font-size: 5rem;
+        font-size: 6rem;
+    }
+
+    a {
+        @include numerico();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //background-color: rgba($color: #000000, $alpha: 0.2);
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        color: $pearl;
     }
 }
 
@@ -83,12 +95,12 @@ body {
 }
 
 .player_2 {
-    @include card_player($jet, $pearl);
+    @include card_player($pearl, $jet);
     @include flip_vh();
 }
 
 .player_1 {
-    @include card_player($jet, $pearl);
+    @include card_player($pearl, $jet);
 }
 
 

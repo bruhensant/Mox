@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <script src="/scripts/js/script.js"></script>
+    <script src="/scripts/script.js"></script>
 
     <title>Mox</title>
 </head>
@@ -16,37 +16,23 @@
 
         <div class="player_2">
             
-            <a class="hp_up">
-                +
-            </a>
+            <a onmousedown="lp2_up(event)" onmouseup="stop()""></a>
 
-            <span class="LP" id="lp_2">20.2</span>
+            <span id="lp2">40</span>
 
-            <a>
-                Nome do Jogador
-            </a>
-
-            <a class="hp_down">
-                -
-            </a>
+            <a onmousedown="lp2_down(event)" onmouseup="stop()"></a>
 
         </div>
 
         <div class="player_1">
 
-            <a class="hp_up">
-                +
-            </a>
+            <a onmousedown="lp1_up(event)" onmouseup="stop()"></a>
 
-            <span class="lp" id="lp_1">20.1</span>
+            <div>
+                <span id="lp1">40</span>
+            </div>
 
-            <a>
-                Nome do Jogador
-            </a>
-
-            <a class="hp_down">
-                -
-            </a>
+            <a onmousedown="lp1_down(event)" onmouseup="stop()"></a>
 
         </div>
 
