@@ -1,11 +1,25 @@
 
+// Cores Padrões
+
+$jet: #000000;
+$brown: #803300;
+$ruby: #F20D0D;
+$amber: #FF6600;
+$tantalite: #FFCC00;
+$emerald: #26D926;
+$sapphire: #0066FF;
+$chrome: #F20DC4;
+$diamond: #999999;
+$pearl: #FEFEFE;
 
 
 
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+}
 
 html, body {
     height: 100%;
@@ -14,7 +28,7 @@ html, body {
 }
 
 body {
-    background-color: black;
+    background-color: $jet;
     margin-bottom: 50px;
 }
 
@@ -43,7 +57,8 @@ body {
 
     span {
         @include numerico();
-        font-family: 'Bebas Neue';
+        font-family: 'Inter var';
+        font-weight: 200;
         color: $cor_fonte;
         font-size: 5rem;
     }
@@ -67,13 +82,14 @@ body {
             transform: scale(-1, -1);
 }
 
-.player_1 {
-    @include card_player(red, white);
-}
-
 .player_2 {
-    @include card_player(green, white);
+    @include card_player($jet, $pearl);
     @include flip_vh();
 }
+
+.player_1 {
+    @include card_player($jet, $pearl);
+}
+
 
 

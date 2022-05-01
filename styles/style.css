@@ -1,5 +1,15 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
 html, body {
   height: 100%;
   overflow: hidden;
@@ -7,7 +17,7 @@ html, body {
 }
 
 body {
-  background-color: black;
+  background-color: #000000;
   margin-bottom: 50px;
 }
 
@@ -28,44 +38,6 @@ body {
   height: 98%;
 }
 
-.player_1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1.5rem;
-  width: 100%;
-  background-color: red;
-  border-radius: 1rem;
-}
-
-.player_1 span {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
-  font-family: 'Bebas Neue';
-  color: white;
-  font-size: 5rem;
-}
-
 .player_2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,7 +54,7 @@ body {
           align-items: center;
   padding: 1.5rem;
   width: 100%;
-  background-color: green;
+  background-color: #000000;
   border-radius: 1rem;
   -webkit-transform: scale(-1, 1);
   transform: scale(-1, -1);
@@ -101,7 +73,47 @@ body {
   user-select: none;
   /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
-  font-family: 'Bebas Neue';
-  color: white;
+  font-family: 'Inter var';
+  font-weight: 200;
+  color: #FEFEFE;
+  font-size: 5rem;
+}
+
+.player_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 1rem;
+}
+
+.player_1 span {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  font-family: 'Inter var';
+  font-weight: 200;
+  color: #FEFEFE;
   font-size: 5rem;
 }
