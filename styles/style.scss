@@ -13,6 +13,7 @@ $diamond: #999999;
 $pearl: #FEFEFE;
 
 
+
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
@@ -38,7 +39,7 @@ body {
     gap: 0.5rem;
 
     padding: 0.5rem;
-    height: 98%; //TODO arrumar um jeito de isso ser mais "certo".
+    height: 98%; //TODO: arrumar um jeito de isso ser mais "certo".
 }
 
 @mixin card_player($cor_fundo,$cor_fonte) {
@@ -67,12 +68,18 @@ body {
         justify-content: center;
         align-items: center;
 
-        //background-color: rgba($color: #000000, $alpha: 0.2);
         width: 100%;
         height: 100%;
         cursor: pointer;
 
         color: $pearl;
+    }
+
+    .options {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
     }
 }
 
@@ -95,12 +102,12 @@ body {
 }
 
 .player_2 {
-    @include card_player($pearl, $jet);
+    @include card_player($sapphire, $jet);
     @include flip_vh();
 }
 
 .player_1 {
-    @include card_player($pearl, $jet);
+    @include card_player($amber, $jet);
 }
 
 

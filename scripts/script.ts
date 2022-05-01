@@ -3,7 +3,7 @@ const time: number = 80;
 
 let downs:any;
 
-function lp1_up(ids:any) {
+function lp1_up(ids:any) { //TODO: adicionar a possibilidade de clicar em todas as funções
     downs = setInterval(() =>{
     var valor = document.getElementById('lp1');
     var atual = parseInt(valor.innerHTML);

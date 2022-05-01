@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <script src="/scripts/script.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
     <title>Mox</title>
 </head>
@@ -17,8 +18,13 @@
         <div class="player_2">
             
             <a onmousedown="lp2_up(event)" onmouseup="stop()""></a>
+            
+            <div class="options">
 
-            <span id="lp2">40</span>
+                <span class="iconify" data-icon="heroicons-solid:cog" style="font-size:2rem;opacity:30%;"></span> <!-- TODO: Icons e função pra mudar as cores-->>
+                <span id="lp2">40</span>
+                <span class="iconify"  data-icon="teenyicons:edit-circle-solid" style="font-size:2rem;opacity:30%;"></span>
+            </div>
 
             <a onmousedown="lp2_down(event)" onmouseup="stop()"></a>
 
@@ -26,10 +32,12 @@
 
         <div class="player_1">
 
-            <a onmousedown="lp1_up(event)" onmouseup="stop()"></a>
+            <a onmousedown="lp1_up(event)" onmouseup="stop()"></a> 
 
-            <div>
+            <div class="options">
+                <span class="iconify" data-icon="heroicons-solid:cog" style="font-size:2rem;opacity:30%;"></span>
                 <span id="lp1">40</span>
+                <span class="iconify"  data-icon="teenyicons:edit-circle-solid" style="font-size:2rem;opacity:30%;"></span>
             </div>
 
             <a onmousedown="lp1_down(event)" onmouseup="stop()"></a>
