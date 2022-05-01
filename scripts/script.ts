@@ -36,7 +36,6 @@ function lp1_down(ids:any) {
     },time);
 }
 
-
 function lp2_up(ids:any) {
     downs = setInterval(() =>{
     var valor = document.getElementById('lp2');
@@ -70,7 +69,17 @@ function lp2_down(ids:any) {
     },time);
 }
 
-
 function stop(){
     clearInterval(downs);
 }
+
+// Replica um nó.
+function multiplyNode(node, count, deep) {
+    for (var i = 0, copy; i < count - 1; i++) { 
+        copy = node.cloneNode(deep);
+        node.parentNode.insertBefore(copy, node);
+        console.log(node);
+    }
+}
+
+multiplyNode(document.querySelector('.player_1'), 3, true);

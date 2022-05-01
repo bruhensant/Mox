@@ -39,7 +39,7 @@ body {
     gap: 0.5rem;
 
     padding: 0.5rem;
-    height: 98%; //TODO: arrumar um jeito de isso ser mais "certo".
+    height: 98%; //TODO: arru   mar um jeito de isso ser mais "certo".
 }
 
 @mixin card_player($cor_fundo,$cor_fonte) {
@@ -53,6 +53,11 @@ body {
     
     background-color: $cor_fundo;
     border-radius: 1rem;
+
+    .icon {
+        font-size: 2rem;
+        opacity: 30%;
+    }
 
     span {
         @include numerico();

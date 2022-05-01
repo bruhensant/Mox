@@ -51,3 +51,12 @@ function lp2_down(ids) {
 function stop() {
     clearInterval(downs);
 }
+// Replica um nó.
+function multiplyNode(node, count, deep) {
+    for (var i = 0, copy; i < count - 1; i++) {
+        copy = node.cloneNode(deep);
+        node.parentNode.insertBefore(copy, node);
+        console.log(node);
+    }
+}
+multiplyNode(document.querySelector('.player_1'), 3, true);
