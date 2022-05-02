@@ -42,6 +42,14 @@ body {
     height: 98%; //TODO: arru   mar um jeito de isso ser mais "certo".
 }
 
+.div_cartões_v { //TODO: tá tudo errado no 4v
+    @extend .div_cartões;
+    gap: 0px;
+    padding: 0px;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
 @mixin card_player($cor_fundo,$cor_fonte) {
     display: flex;
     justify-content: center;
@@ -98,7 +106,7 @@ body {
                                     supported by Chrome, Edge, Opera and Firefox */
 }
 
-@mixin flip_vh() {
+@mixin invert() {
     -webkit-transform: scale(-1, 1);
        -moz-transform: scale(-1, 1);
         -ms-transform: scale(-1, 1);
@@ -106,14 +114,41 @@ body {
             transform: scale(-1, -1);
 }
 
-.player_2 {
-    @include card_player($sapphire, $jet);
-    @include flip_vh();
+@mixin rot_c() {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
 }
 
 .player_1 {
-    @include card_player($amber, $jet);
+    @include card_player($ruby, $jet);
+    @include rot_c();
+    
 }
 
+.player_2 {
+    @include card_player($emerald, $jet);
+    @include rot_c();
+    
+}
 
+.player_3 {
+    @include card_player($sapphire, $jet);
+    @include rot_c();
+    @include invert();
+}
+
+.player_4 {
+    @include card_player($amber, $jet);
+    @include rot_c();
+    @include invert();
+}
+
+.player_c2 {
+    @include card_player($sapphire, $jet);
+    @include invert();
+}
+
+.player_c1 {
+    @include card_player($amber, $jet);
+}
 
