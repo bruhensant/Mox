@@ -7,7 +7,7 @@ const players = [
 
 export default function Page() {
   return (
-	<div className="flex flex-col gap-2 p-2">
+	<div className="flex flex-col gap-2 p-2 h-screen">
 		{
 			players.map((player) => 
 				<Player key={player.id} life={player.life} color={player.color}/>
